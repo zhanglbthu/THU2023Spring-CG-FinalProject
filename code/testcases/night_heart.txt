@@ -1,0 +1,151 @@
+PerspectiveCamera 
+{
+    center 50 52 295.6
+    direction 0 -0.042612 -1
+    up 0 1 0
+    angle 30
+    width 1024
+    height 768
+}
+
+Lights {
+    numLights 2
+    DirectionalLight {
+        direction -0.5 -0.5 -1
+        color 0.5 0.5 0.5 
+    }
+    PointLight {
+      position 50 60 70
+      color 12 12 12
+    }
+}
+
+Background {
+    color 0 0 0 
+}
+
+Materials {
+    numMaterials 9
+    Material { 
+        color 0 0 0
+        emission 80 80 80
+        type 1 0 0
+    }
+    Material { 
+        color 0.000648 0.001152 0.003
+        emission 0.00114 0.00113 0.00212
+        type 1 0 0
+    }
+    Material { 
+        color 0 0 0
+        emission 100 84.3 69.8
+        type 1 0 0
+    }
+    Material { 
+        color 0.006 0.008 0.01
+        type 0 0 1
+        refr 1.5
+    }
+    Material {
+        color 0.35 0.35 0.35
+        type 1 0 0
+    }
+    Material {
+        color 0.33 0.33 0.33
+        type 1 0 0 
+    }
+    Material {
+        color 0.353 0.353 0.353
+        type 1 0 0
+    }
+    Material {
+        color 1.0 0.5 0.8
+        type 0 0.8 0.2
+        emission 0.8 0 0.3
+        refr 1.5
+    }
+    Material {
+        color 0.83 0.69 0.22
+        type 0 0.8 0.2
+        refr 1.5
+    }
+}
+
+Group {
+    numObjects 12
+    MaterialIndex 0
+    Sphere {
+    center 8200 9200 -20000
+        radius 2500
+    }
+    MaterialIndex 1
+    Sphere {
+    center 50 0 0 
+        radius 25000
+    }
+    MaterialIndex 2
+    Sphere {
+    center -2000 1600 -10000 
+        radius 5
+    }
+    MaterialIndex 2
+    Sphere {
+    center 0 1800 -10000
+        radius 5
+    }
+    MaterialIndex 2
+    Sphere {
+    center 3000 1500 -10000
+        radius 5
+    }
+    MaterialIndex 3
+    Sphere {
+    center 600 -34999 300
+        radius 35000
+    }
+    MaterialIndex 4
+    Plane
+    {
+        normal 0 1 0
+        offset -0.5
+    }
+    MaterialIndex 6
+    Sphere {
+    center -1000 -300 -3000
+        radius 500
+    }
+    MaterialIndex 6
+    Sphere {
+    center 0 -500 -3000
+        radius 830
+    }
+    MaterialIndex 6
+    Sphere {
+    center 1000 -300 -3000
+        radius 490
+    }
+    MaterialIndex 7
+    Transform {
+        Translate 20 10 -10
+        Scale 0.7 0.7 0.7
+        XRotate -30
+        YRotate 40
+        ZRotate 40
+        TriangleMesh 
+        {
+            obj_file mesh/heart.obj
+        }
+    }
+    MaterialIndex 8
+    Transform {
+        Translate 90 -5 20
+        Scale 18 18 18
+        XRotate 5
+        YRotate 10
+        TriangleMesh 
+        {
+            obj_file mesh/ring.obj
+        }
+    }
+}
+
